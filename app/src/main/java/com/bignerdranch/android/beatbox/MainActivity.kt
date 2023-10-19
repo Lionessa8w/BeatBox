@@ -11,8 +11,13 @@ import com.bignerdranch.android.beatbox.databinding.ListItemSoundBinding
 
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var beatBox: BeatBox
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // загружаем саписок названий файлов
+        beatBox=BeatBox(assets)
+        beatBox.loadSound()
         //ActivityMainBinding класс привязки данных
         //DataBindingUtil для привязки модели данных со вьюшками
         val binding: ActivityMainBinding =
