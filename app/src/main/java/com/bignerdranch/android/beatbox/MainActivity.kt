@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var beatBox: BeatBox
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+       super.onCreate(savedInstanceState)
         // загружаем саписок названий файлов
         beatBox=BeatBox(assets)
         //ActivityMainBinding класс привязки данных
