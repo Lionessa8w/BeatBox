@@ -14,9 +14,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var beatBox: BeatBox
     override fun onCreate(savedInstanceState: Bundle?) {
-       super.onCreate(savedInstanceState)
+        super.onCreate(savedInstanceState)
         // загружаем саписок названий файлов
-        beatBox=BeatBox(assets)
+        beatBox = BeatBox(assets)
         //ActivityMainBinding класс привязки данных
         //DataBindingUtil для привязки модели данных со вьюшками
         val binding: ActivityMainBinding =
@@ -31,11 +31,12 @@ class MainActivity : AppCompatActivity() {
     private inner class SoundHolder(private val binding: ListItemSoundBinding) :
         RecyclerView.ViewHolder(binding.root) {
         init {
-                binding.viewModel=SoundViewModel()
+            binding.viewModel = SoundViewModel()
         }
-        fun bind(sound: Sound){
+
+        fun bind(sound: Sound) {
             binding.apply {
-                viewModel?.sound=sound
+                viewModel?.sound = sound
                 //выполнить ожидающие привязки
                 executePendingBindings()
             }
@@ -43,7 +44,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private inner class SoundAdapter(private val sounds: List<Sound>) : RecyclerView.Adapter<SoundHolder>() {
+    private inner class SoundAdapter(private val sounds: List<Sound>) :
+        RecyclerView.Adapter<SoundHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SoundHolder {
             val binding = DataBindingUtil.inflate<ListItemSoundBinding>(
                 layoutInflater,
@@ -58,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
 
         override fun onBindViewHolder(holder: SoundHolder, position: Int) {
-            val sound=sounds[position]
+            val sound = sounds[position]
             holder.bind(sound)
 
         }
