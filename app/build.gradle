@@ -43,7 +43,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.10.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.databinding:databinding-runtime:8.1.2'
-    testImplementation 'org.mockito:mockito- core:2.25.0'
+    testImplementation 'org.mockito:mockito-core:4.8.0'
 //    implementation 'androidx.databinding:library:3.2.0-alpha11'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
