@@ -5,7 +5,7 @@ import androidx.databinding.Bindable
 
 class SoundViewModel : BaseObservable() {
     fun onButtonClicked() {
-        TODO("Not yet implemented")
+//        TODO("Not yet implemented")
     }
 
     var sound: Sound? = null

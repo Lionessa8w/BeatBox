@@ -1,11 +1,9 @@
 package com.bignerdranch.android.beatbox
 
 import org.junit.Assert.*
-
 import org.junit.Before
 import org.junit.Test
-import java.util.Objects
-import javax.security.auth.Subject
+import org.mockito.Mockito.mock
 
 
 class SoundViewModelTest {
