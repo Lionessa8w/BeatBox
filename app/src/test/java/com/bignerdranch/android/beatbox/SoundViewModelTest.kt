@@ -8,19 +8,19 @@ import java.util.Objects
 import javax.security.auth.Subject
 
 class SoundViewModelTest {
-    private lateinit var sound:Sound
+    private lateinit var sound: Sound
     private lateinit var subject: SoundViewModel
 
     @Before
     fun setUp() {
-        sound= Sound("assetPath")
-        subject= SoundViewModel()
-        subject.sound=sound
+        sound = Sound("assetPath")
+        subject = SoundViewModel()
+        subject.sound = sound
     }
+
     @Test
-    fun exposesSoundNameAsTitle(){
-        //wtf?!
-        assertThat(subject.title, 'is'(sound.name))
+    fun exposesSoundNameAsTitle() {
+        assertEquals(subject.title, sound.name)
 
     }
 }
