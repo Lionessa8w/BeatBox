@@ -2,6 +2,7 @@ package com.bignerdranch.android.beatbox
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
@@ -13,6 +14,7 @@ import com.bignerdranch.android.beatbox.databinding.ListItemSoundBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var beatBox: BeatBox
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // загружаем саписок названий файлов
@@ -28,10 +30,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        beatBox.release()
+    }
+
+
     private inner class SoundHolder(private val binding: ListItemSoundBinding) :
         RecyclerView.ViewHolder(binding.root) {
         init {
-            binding.viewModel = SoundViewModel()
+            binding.viewModel = SoundViewModel(beatBox)
         }
 
         fun bind(sound: Sound) {
