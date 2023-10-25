@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme"
-        parent="Theme.AppCompat">
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="BeatBoxButton">
-        <item name="android:background">@color/dark_blue</item>
+        <item name="android:backgroundTint">@color/dark_blue</item>
+        <item name="android:shape">rectangle</item>
+
+
     </style>
-     <style name="BeatBoxButton.Strong">
-         <item name="android:textStyle">bold</item>
-     </style>
+
+    <style name="BeatBoxButton.Strong">
+        <item name="android:textStyle">bold</item>
+    </style>
 
 </resources>
